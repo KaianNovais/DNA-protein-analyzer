@@ -18,7 +18,9 @@ public class DNA {
          int indexTGA = dna.indexOf("TGA");
  
  
-         //Verifica se o DNA contém uma proteína ou não
+         //Verifica se o DNA contém uma proteína ou não baseado na validação se existe ATG e TGA 
+         //e se a quantidade de caracteres entres eles 
+         //é divisível por 3
          if(indexATG >= 0 && indexTGA >= 0 && (indexATG - indexTGA) % 3 == 0 ){
            
            String protein = dna.substring(indexATG, indexTGA + 3);
